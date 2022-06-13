@@ -70,11 +70,11 @@ isilon               isilon-node-f8jhb                            2/2     Runnin
 - kubectl create -f pvc.yaml
 - curl -LO https://raw.githubusercontent.com/theocrithary/Piper-2020/master/Day%202/Lab%2004%20-%20PVs%20with%20Isilon/test_pod.yaml
 - kubectl create -f test_pod.yaml
-- cp csi-powerscale/samples/volumesnapshot/snapshot-of-test-pvc.yaml .
+- cp csi-powerscale/samples/volumesnapshot/snapshot-of-pvol0.yaml .
 
-## Edit the namespace from 'default' and replace with 'test'
-- vi snapshot-of-test-pvc.yaml
-- kubectl create -f snapshot-of-test-pvc.yaml
+## Edit the variables to suit your environment
+- vi snapshot-of-pvol0.yaml
+- kubectl create -f snapshot-of-pvol0.yaml
 
 ## Check that all items are created successfully
 - kubectl get persistentvolumes
@@ -89,7 +89,7 @@ isilon               isilon-node-f8jhb                            2/2     Runnin
 - touch test
 
 ## Clean up and remove all test items
-- kubectl delete volumesnapshot snapshot-of-pvol0-pvc
+- kubectl delete volumesnapshot snapshot-of-pvol0
 - kubectl delete pod isilontestpod1
 - kubectl delete pvc pvol0
 - kubectl delete ns test
