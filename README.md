@@ -66,14 +66,11 @@ isilon               isilon-node-f8jhb                            2/2     Runnin
 - kubectl create namespace test
 - kubectl config set-context --current --namespace=test
 - cd ~
-- curl -LO https://raw.githubusercontent.com/theocrithary/Piper-2020/master/Day%202/Lab%2004%20-%20PVs%20with%20Isilon/pvc.yaml
+- curl -LO https://github.com/theocrithary/PowerScale-CSI-Helm/raw/main/pvc.yaml
 - kubectl create -f pvc.yaml
-- curl -LO https://raw.githubusercontent.com/theocrithary/Piper-2020/master/Day%202/Lab%2004%20-%20PVs%20with%20Isilon/test_pod.yaml
+- curl -LO https://github.com/theocrithary/PowerScale-CSI-Helm/raw/main/test_pod.yaml
 - kubectl create -f test_pod.yaml
-- cp csi-powerscale/samples/volumesnapshot/snapshot-of-pvol0.yaml .
-
-## Edit the variables to suit your environment
-- vi snapshot-of-pvol0.yaml
+- curl -LO https://github.com/theocrithary/PowerScale-CSI-Helm/raw/main/snapshot-of-pvol0.yaml
 - kubectl create -f snapshot-of-pvol0.yaml
 
 ## Check that all items are created successfully
