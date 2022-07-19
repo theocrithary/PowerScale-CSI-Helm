@@ -1,5 +1,8 @@
 # PowerScale-CSI-Helm
 
+## Youtube video:
+- https://youtu.be/UcAD8upATek
+
 ## Login to the Isilon web interface
 - Navigate to "File System" --> "File system explorer"
 - Create a new directory un the /ifs/data path called csi (i.e. /ifs/data/csi)
